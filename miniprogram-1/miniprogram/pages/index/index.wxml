@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view class="container">
+
+  <!-- 用户 openid -->
+  <view class="userinfo">
+    <button 
+      open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+      class="userinfo-avatar"
+      style="background-image: url({{avatarUrl}})"
+      size="default"
+    ></button>
+<view>添加</view>
+<scroll-view>
+  <view wx:for="{{books}}" wx:key="key">
+    <text>{{item.title}}</text>
+
+  </view>
+</scroll-view>
+  </view>
+
+
+</view>
